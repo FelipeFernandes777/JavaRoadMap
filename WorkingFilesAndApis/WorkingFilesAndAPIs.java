@@ -3,6 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.FileTime;
+import java.nio.file.attribute.UserPrincipal;
 
 public class WorkingFilesAndAPIs {
     /** JavaFile
@@ -32,6 +33,7 @@ public class WorkingFilesAndAPIs {
         System.out.println("Is Equal " + isEqual);
 
         /* Obtendo os propietarios do arquivo */
-
+        UserPrincipal owner = Files.getOwner(path);
+        System.out.println("Owner: "+ owner);
     }
 }
