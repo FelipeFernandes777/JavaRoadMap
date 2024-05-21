@@ -36,4 +36,8 @@ public class WorkingFilesAndAPIs {
         UserPrincipal owner = Files.getOwner(path);
         System.out.println("Owner: "+ owner);
     }
+
+    public Path getPath(){
+        return path;
+    }
 }
