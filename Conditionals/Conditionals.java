@@ -120,15 +120,11 @@ public class Conditionals {
         String department = in.next();
 
         switch (empID) {
-            case 1:
-                System.out.println("Felipe");
-                break;
-            case 2:
-                System.out.println("Emanuelle");
-                break;
-            case 3:
+            case 1 -> System.out.println("Felipe");
+            case 2 -> System.out.println("Emanuelle");
+            case 3 -> {
                 System.out.println("Emp numero 3");
-                switch (department){
+                switch (department) {
                     case "TI":
                         System.out.println("Departamento de TI");
                     case "Diretores":
@@ -136,9 +132,8 @@ public class Conditionals {
                     default:
                         System.out.println("Insira um departamento valido");
                 }
-                break;
-            default:
-                System.out.println("Insira um ID valido.");
+            }
+            default -> System.out.println("Insira um ID valido.");
         }
     }
 }
